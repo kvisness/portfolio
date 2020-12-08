@@ -4,27 +4,26 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 // Components
-import Products from '../Products/Products.js';
-import Checkout from '../Checkout/Checkout.js';
+import Home from '../Home/Home.js';
+import Projects from '../Projects/Projects.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Redux Shopping Cart</h1>
         
         <Router>
           <div>
-            <ul className="nav">
+            {/* <ul className="nav">
               <li>
-                <Link to="/">Product</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/checkout">Checkout</Link>
+                <Link to="/projects">Projects</Link>
               </li>
-            </ul>
-            <Route exact path="/" component={Products} />
-            <Route exact path="/checkout" component={Checkout} />            
+            </ul> */}
+            <Route exact path="/" component={Home} />
+            <Route exact path="/projects" component={Projects} />            
           </div>
         </Router>
       </div>
