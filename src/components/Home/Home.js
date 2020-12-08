@@ -11,6 +11,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import IconButton from '@material-ui/core/IconButton';
 import CardActionArea from '@material-ui/core/CardActionArea';
+import { lightGreen } from '@material-ui/core/colors';
 
 
 
@@ -44,6 +45,9 @@ const styles = ({
     goToButtons: {
         color: 'white',
         backgroundColor: 'green',
+        margin: 10,
+        '&:hover': { backgroundColor: 'lightGreen' }
+        
     },
     heading: {
         color: 'white',
@@ -61,20 +65,22 @@ class Home extends Component {
     }
 
     goToFlopDoodleGitHub = () => {
-        window.open('')//this is where git hub repository goes
+        window.open('https://github.com/kvisness/Flop-Doodle')//this is where git hub repository goes
     }
     goToGitHub = () => {
-        console.log('clicked');
+        window.open('https://github.com/kvisness')
         //this is where git hub repository goes 
     }
     goToLinkedIn = () => {
-        window.open('')//this is where git hub repository goes
+        window.open('https://www.linkedin.com/in/krisvisness/')//this is where git hub repository goes
     }
 
     goToEmail = () => {
         window.location.href = "mailto:krisvisness@gmail.com?subject=More Info Requested%20From%20Portfolio";
     }
-
+goToFraser =()=>{
+    window.open('https://github.com/Fraser-Ltd/fraser-work-orders')
+}
     render() {
         const { classes } = this.props
         return (
@@ -105,7 +111,7 @@ class Home extends Component {
                 </Grid >
                 <Grid item xs={9}>
                     <Grid container justify='space-evenly' alignItems='center'>
-                        <Grid item xs={9}>
+                        <Grid item xs={6}>
                             <Card className={classes.infoCard}>
                                 <CardMedia
                                     component="img"
@@ -113,13 +119,13 @@ class Home extends Component {
                                     image="Flop-Doodle.jpeg"//project pic
                                 />
                                 <Typography className={classes.cardTitle}>Flop-Doodle (solo project)</Typography>
-                                <CardActionArea>
-                                    <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
-                                        onClick={this.goToGitHub}>Go to Flop-Doodle on GitHub</Button>
-                                </CardActionArea>
+
+                                <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
+                                    onClick={this.goToFlopDoodleGitHub}>Go to Flop-Doodle on GitHub</Button>
+
                             </Card>
                         </Grid>
-                        <Grid item xs={9}>
+                        <Grid item xs={8}>
                             <Grid container justify='space-evenly' alignItems='center'>
                                 <Grid item xs={9}>
                                     <Card className={classes.infoCard}>
@@ -129,10 +135,10 @@ class Home extends Component {
                                             image="Fraser-LTD-MMS.png"//project pic
                                         />
                                         <Typography className={classes.cardTitle}>Fraser LTD (group project)</Typography>
-                                        <CardActionArea>
-                                            <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
-                                                onClick={this.goToGitHub}>Go to Fraser LTD on GitHub</Button>
-                                        </CardActionArea>
+
+                                        <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
+                                            onClick={this.goToFraser}>Go to Fraser LTD on GitHub</Button>
+
                                     </Card>
                                 </Grid>
                             </Grid>
