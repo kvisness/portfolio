@@ -11,7 +11,6 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import IconButton from '@material-ui/core/IconButton';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import { lightGreen } from '@material-ui/core/colors';
 
 
 
@@ -45,9 +44,6 @@ const styles = ({
     goToButtons: {
         color: 'white',
         backgroundColor: 'green',
-        margin: 10,
-        '&:hover': { backgroundColor: 'lightGreen' }
-        
     },
     heading: {
         color: 'white',
@@ -65,22 +61,20 @@ class Home extends Component {
     }
 
     goToFlopDoodleGitHub = () => {
-        window.open('https://github.com/kvisness/Flop-Doodle')//this is where git hub repository goes
+        window.open('')//this is where git hub repository goes
     }
     goToGitHub = () => {
-        window.open('https://github.com/kvisness')
+        console.log('clicked');
         //this is where git hub repository goes 
     }
     goToLinkedIn = () => {
-        window.open('https://www.linkedin.com/in/krisvisness/')//this is where git hub repository goes
+        window.open('')//this is where git hub repository goes
     }
 
     goToEmail = () => {
         window.location.href = "mailto:krisvisness@gmail.com?subject=More Info Requested%20From%20Portfolio";
     }
-goToFraser =()=>{
-    window.open('https://github.com/Fraser-Ltd/fraser-work-orders')
-}
+
     render() {
         const { classes } = this.props
         return (
@@ -119,15 +113,15 @@ goToFraser =()=>{
                                     image="Flop-Doodle.jpeg"//project pic
                                 />
                                 <Typography className={classes.cardTitle}>Flop-Doodle (solo project)</Typography>
-
-                                <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
-                                    onClick={this.goToFlopDoodleGitHub}>Go to Flop-Doodle on GitHub</Button>
-
+                                <CardActionArea>
+                                    <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
+                                        onClick={this.goToGitHub}>Go to Flop-Doodle on GitHub</Button>
+                                </CardActionArea>
                             </Card>
                         </Grid>
-                        <Grid item xs={8}>
+                        <Grid item xs={10}>
                             <Grid container justify='space-evenly' alignItems='center'>
-                                <Grid item xs={9}>
+                                <Grid item xs={7}>
                                     <Card className={classes.infoCard}>
                                         <CardMedia
                                             component="img"
@@ -135,10 +129,10 @@ goToFraser =()=>{
                                             image="Fraser-LTD-MMS.png"//project pic
                                         />
                                         <Typography className={classes.cardTitle}>Fraser LTD (group project)</Typography>
-
-                                        <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
-                                            onClick={this.goToFraser}>Go to Fraser LTD on GitHub</Button>
-
+                                        <CardActionArea>
+                                            <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
+                                                onClick={this.goToGitHub}>Go to Fraser LTD on GitHub</Button>
+                                        </CardActionArea>
                                     </Card>
                                 </Grid>
                             </Grid>
