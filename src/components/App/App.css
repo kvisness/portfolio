@@ -2,9 +2,15 @@
   text-align: center;
   
 }
+html{
+  height: 100%;
+}
 body{
-  background-image: linear-gradient(darkgray, silver, black);
-  
+   background: linear-gradient(darkgray, silver, black); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100%;
+   background-attachment: fixed;
 } 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

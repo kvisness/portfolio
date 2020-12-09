@@ -29,8 +29,9 @@ const styles = ({
         position: 'fixed',
         top: 0,
         minWidth: 400,
+        maxWidth: 400,
         minHeight: window.innerHeight,
-        backgroundColor: 'slategray',
+        backgroundColor: 'silver',
     },
     infoCard: {
         marginTop: 20,
@@ -39,14 +40,14 @@ const styles = ({
         backgroundColor: 'orange',
     },
     iconButton: {
-        color: 'white'
+        color: 'black'
     },
     goToButtons: {
         color: 'white',
         backgroundColor: 'green',
     },
     heading: {
-        color: 'white',
+        color: 'black',
     }
 })
 
@@ -61,14 +62,14 @@ class Home extends Component {
     }
 
     goToFlopDoodleGitHub = () => {
-        window.open('')//this is where git hub repository goes
+        window.open('https://github.com/kvisness/Flop-Doodle')//this is where git hub repository goes
     }
     goToGitHub = () => {
-        console.log('clicked');
+        window.open('https://github.com/kvisness');
         //this is where git hub repository goes 
     }
     goToLinkedIn = () => {
-        window.open('')//this is where git hub repository goes
+        window.open('https://www.linkedin.com/in/krisvisness/')//this is where git hub repository goes
     }
 
     goToEmail = () => {
@@ -89,28 +90,24 @@ class Home extends Component {
                         <Typography variant='h3' className={classes.heading}> Visness </Typography><br></br>
                         <Typography variant='h5' className={classes.heading}> Fullstack Developer </Typography><br></br><br></br>
                         <Typography className={classes.iconButton}>Welcome to my website!</Typography>
-                        <Typography className={classes.iconButton}>Here are photos of my </Typography>
-                        <Typography className={classes.iconButton}>solo project that I recently created. </Typography>
-                        <Typography className={classes.iconButton}>Excited to join the tech world </Typography>
-                        <Typography className={classes.iconButton}>when I graduate from Emerging </Typography>
-                        <Typography className={classes.iconButton}>Digital Academy in December of 2020. </Typography>
-                        <Typography className={classes.iconButton}>I am ready to take on new challenges </Typography>
-                        <Typography className={classes.iconButton}>and help others become successful! </Typography><br></br><br></br>
+                        <Typography variant='body1' className={classes.iconButton}>Here are photos of my solo project that I recently created.
+                        Excited to join the tech world when I graduate from Emerging Digital Academy in December of 2020.
+                        I am ready to take on new challenges and help others become successful!</Typography><br></br><br></br>
                         <Typography className={classes.iconButton}>Please contact me here: </Typography>
                         <IconButton onClick={this.goToLinkedIn} className={classes.iconButton}><LinkedInIcon /></IconButton>
                         <IconButton onClick={this.goToGitHub} className={classes.iconButton}><GitHubIcon /></IconButton>
                         <IconButton onClick={this.goToEmail} className={classes.iconButton}><ContactMailIcon /></IconButton>
-
                     </Card>
                 </Grid >
                 <Grid item xs={9}>
                     <Grid container justify='space-evenly' alignItems='center'>
-                        <Grid item xs={6}>
+                        <Grid item xs={5}>
                             <Card className={classes.infoCard}>
                                 <CardMedia
                                     component="img"
                                     className={classes.media}
                                     image="Flop-Doodle.jpeg"//project pic
+                                    style={{ height: '100%', width: '100%' }}
                                 />
                                 <Typography className={classes.cardTitle}>Flop-Doodle (solo project)</Typography>
                                 <CardActionArea>
@@ -119,24 +116,55 @@ class Home extends Component {
                                 </CardActionArea>
                             </Card>
                         </Grid>
-                        <Grid item xs={10}>
-                            <Grid container justify='space-evenly' alignItems='center'>
-                                <Grid item xs={7}>
-                                    <Card className={classes.infoCard}>
-                                        <CardMedia
-                                            component="img"
-                                            className={classes.media}
-                                            image="Fraser-LTD-MMS.png"//project pic
-                                        />
-                                        <Typography className={classes.cardTitle}>Fraser LTD (group project)</Typography>
-                                        <CardActionArea>
-                                            <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
-                                                onClick={this.goToGitHub}>Go to Fraser LTD on GitHub</Button>
-                                        </CardActionArea>
-                                    </Card>
-                                </Grid>
-                            </Grid>
+                        {/* <Grid item xs={10}>
+                            <Grid container justify='space-evenly' alignItems='center'> */}
+                        <Grid item xs={5}>
+                            <Card className={classes.infoCard}>
+                                <CardMedia
+                                    component="img"
+                                    className={classes.media}
+                                    image="Fraser-LTD-MMS.png"//project pic
+                                    style={{ height: '100%', width: '100%' }}
+                                />
+                                <Typography className={classes.cardTitle}>Fraser LTD (group project)</Typography>
+                                <CardActionArea>
+                                    <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
+                                        onClick={this.goToGitHub}>Go to Fraser LTD on GitHub</Button>
+                                </CardActionArea>
+                            </Card>
                         </Grid>
+                        <Grid item xs={5}>
+                            <Card className={classes.infoCard}>
+                                <CardMedia
+                                    component="img"
+                                    className={classes.media}
+                                    image="Fraser-LTD-MMS.png"//project pic
+                                    style={{ height: '100%', width: '100%' }}
+                                />
+                                <Typography className={classes.cardTitle}>Fraser LTD (group project)</Typography>
+                                <CardActionArea>
+                                    <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
+                                        onClick={this.goToGitHub}>Go to Fraser LTD on GitHub</Button>
+                                </CardActionArea>
+                            </Card>
+                        </Grid>
+                        <Grid item xs={5}>
+                            <Card className={classes.infoCard}>
+                                <CardMedia
+                                    component="img"
+                                    className={classes.media}
+                                    image="ProfilePic.png"//project pic
+                                    style={{ width: '47%', marginLeft: '26.5%', marginTop: '1%' }}
+                                />
+                                <Typography className={classes.cardTitle}>Fraser LTD (group project)</Typography>
+                                <CardActionArea>
+                                    <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
+                                        onClick={this.goToGitHub}>Go to GitHub Portfolio</Button>
+                                </CardActionArea>
+                            </Card>
+                        </Grid>
+                        {/* </Grid>
+                        </Grid> */}
                     </Grid>
                 </Grid>
             </Grid>)
