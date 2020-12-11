@@ -155,7 +155,7 @@ render() {
                             <Typography className={classes.cardTitle}>Fraser LTD (group project)</Typography>
                             <CardActionArea>
                                 <Button className={classes.goToButtons} size='medium' color='primary' variant='outlined'
-                                    onClick={this.goToGitHub}>Go to Fraser LTD on GitHub</Button>
+                                    onClick={this.goToFraserLtd}>Go to Fraser LTD on GitHub</Button>
                             </CardActionArea>
                         </Card>
                     </Grid>
