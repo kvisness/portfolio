@@ -5,7 +5,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 // Components
 import Home from '../Home/Home.js';
-import Projects from '../Projects/Projects.js';
+
 
 class App extends Component {
   render() {
@@ -22,8 +22,7 @@ class App extends Component {
                 <Link to="/projects">Projects</Link>
               </li>
             </ul> */}
-            <Route exact path="/" component={Home} />
-            <Route exact path="/projects" component={Projects} />            
+            <Route exact path="/" component={Home} />           
           </div>
         </Router>
       </div>
